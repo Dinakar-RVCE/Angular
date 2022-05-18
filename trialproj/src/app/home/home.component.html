@@ -1,0 +1,52 @@
+<nav >
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/">sign-up</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/signin">Login</a>
+        </li>
+
+      </ul>
+      <form >
+        
+        <a href="/" class="btn">Logout</a>
+      </form>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div>
+      <div class="row">
+        <div class="col-md-3 mt-4" *ngFor="let item of user">
+            <div class="card" style="width: 20%;">
+              <div class="card-body">
+                <h5 class="card-title">{{item.fname}} {{item.lname}}</h5>
+              </div>
+              <ul>
+                
+                <li class="list-group-item">F-Name :- {{item.fname}}</li>
+                <li class="list-group-item">L-Name :- {{item.lname}}</li>
+                <li class="list-group-item">Designation :- {{item.designation}}</li>
+                <li class="list-group-item">mobile :- {{item.phone}}</li>
+                <li class="list-group-item">email :- {{item.email}}</li>
+                
+              <div class="d-inline align-auto my-2">
+                <button type="button" ><i class="bi bi-pen"></i></button>
+                <button type="button" (click)="deletestorage(item.id)"><i class="bi bi-trash"></i></button>
+                
+              </div>
+              </ul>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>

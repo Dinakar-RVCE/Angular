@@ -1,0 +1,53 @@
+<app-header></app-header>
+        <div class="col">  
+          <div class="card card-registration my-4">  
+            <div class="row g-0">  
+                <img  
+                  src="https://source.unsplash.com/1600x900/?student,bookss"  
+                  alt="Sample photo"  
+                  class="img-fluid"  
+                />  
+              </div>  
+              <div class="col-xl-6">  
+                  <form #mySignUpForm="ngForm" (ngSubmit)="onSubmitTemplateBasedsignup(mySignUpForm.value)">
+                    <h3> Student registration form </h3>  
+                    <div class="row">  
+                      <div class="col-md-6 mb-4">  
+                        <div class="form-outline">  
+                          <input type="email" id="form3Example1m" name="email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" [ngModel]="reg.email" class="form-control form-control-lg" required=""/>  
+                          <label class="form-label" for="form3Example1m"> Email </label>  
+                        </div>  
+                      </div>   
+                    </div>
+                    <div class="row">  
+                      <div class="col-md-6 mb-4">  
+                        <div class="form-outline">  
+                          <input type="text" id="form3Example1m" name="username" pattern="\w{3,}" [ngModel]="reg.username" class="form-control form-control-lg" required=""/>  
+                          <label class="form-label" for="form3Example1m"> User name </label>  
+                        </div>  
+                      </div>   
+                    </div>  
+                    <div class="row">  
+                      <div class="col-md-6 mb-4">  
+                        <div class="form-outline">  
+                          <input type="password" id="form3Example1m1" name="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"  [ngModel]="reg.password" class="form-control form-control-lg" required=""/>  
+                          <label class="form-label" for="form3Example1m1"> Password </label>  
+                        </div>  
+                      </div>    
+                    </div>  
+                    <div class="row">  
+                      <div class="col-md-6 mb-4">   
+                          <input type="tel" id="phone" pattern="[0-9]{10}" name="phone" [ngModel]="reg.phone" class="form-control form-control-lg" required=""/>  
+                          <label class="form-label" for="form3Example1m"> Phone Number </label>  
+                        </div>  
+                      </div>   
+                    </div>
+                    
+                    <div>  
+                      <button type="submit" id="registerbtn" [disabled]="!mySignUpForm.valid">Register</button>  
+                      <!-- <button type="submit" mat-raised-button color="accent" class="btn btn-lg ms-2" (click)="btnclick()"> Register </button>   -->
+                    </div> 
+                  </form> 
+              </div>  
+            </div>  
+
